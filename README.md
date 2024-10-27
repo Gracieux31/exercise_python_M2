@@ -1,1 +1,71 @@
 # exercise_python_M2
+
+Écrivez un script qui détermine si une chaîne contient ou non le caractère « e ».
+
+Écrivez un script qui recopie une chaîne (dans une nouvelle variable), en insérant des astérisques entre les caractères.
+Ainsi par exemple, « gaston » devra devenir « g*a*s*t*o*n »
+
+Écrivez un script qui recopie une chaîne (dans une nouvelle variable) en l'inversant.
+Ainsi par exemple, « zorglub » deviendra « bulgroz ».
+
+En partant de l'exercice précédent, écrivez un script qui détermine si une chaîne de caractères donnée est un palindrome (c'est-à-dire une chaîne qui peut se lire indifféremment dans les deux sens), comme par exemple « radar » ou « s.o.s ».
+
+Soient les listes suivantes :
+t1 = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+t2 = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre']
+
+ - Écrivez un petit programme qui crée une nouvelle liste t3. Celle-ci devra contenir tous les éléments des deux listes en les alternant, de telle manière que chaque nom de mois soit suivi du nombre de jours correspondant :
+['Janvier',31,'Février',28,'Mars',31, etc...].
+
+ - Écrivez un programme qui affiche « proprement » tous les éléments d'une liste. Si on l'appliquait par exemple à la liste t2 de l'exercice ci-dessus, on devrait obtenir :
+Janvier Février Mars Avril Mai Juin Juillet Août Septembre Octobre Novembre Décembre
+
+ - Écrivez un programme qui recherche le plus grand élément présent dans une liste donnée. Par exemple, si on l'appliquait à la liste [32, 5, 12, 8, 3, 75, 2, 15], ce programme devrait afficher :
+le plus grand élément de cette liste a la valeur 75.
+
+ - Écrivez un programme qui analyse un par un tous les éléments d'une liste de nombres (par exemple celle de l'exercice précédent) pour générer deux nouvelles listes. L'une contiendra seulement les nombres pairs de la liste initiale, et l'autre les nombres impairs. Par exemple, si la liste initiale est celle de l'exercice précédent, le programme devra construire une liste pairs qui contiendra [32, 12, 8, 2], et une liste impairs qui contiendra [5, 3, 75, 15]. 
+Astuce : pensez à utiliser l'opérateur modulo (%) déjà cité précédemment.
+
+ - Écrivez un programme qui analyse un par un tous les éléments d'une liste de mots (par exemple : ['Jean', 'Maximilien', 'Brigitte', 'Sonia', 'Jean-Pierre', 'Sandra'] ) pour générer deux nouvelles listes. L'une contiendra les mots comportant moins de 6 caractères, l'autre les mots comportant 6 caractères ou davantage.
+
+Vous avez à votre disposition un fichier texte quelconque (pas trop gros). Écrivez un script qui compte les occurrences de chacune des lettres de l'alphabet dans ce texte (on simplifiera le problème en ne tenant pas compte des lettres accentuées).
+
+ - Modifiez le script ci-dessus afin qu'il établisse une table des occurrences de chaque mot dans le texte. 
+Conseil : dans un texte quelconque, les mots ne sont pas seulement séparés par des espaces, mais également par divers signes de ponctuation. Pour simplifier le problème, vous pouvez commencer par remplacer tous les caractères nonalphabétiques par des espaces, et convertir la chaîne résultante en une liste de mots à l'aide de la méthode split().
+
+ - Vous avez à votre disposition un fichier texte quelconque (pas trop gros). Écrivez un script qui analyse ce texte, et mémorise dans un dictionnaire l'emplacement exact de chacun des mots (compté en nombre de caractères à partir du début). Lorsqu'un même mot apparaît plusieurs fois, tous ses emplacements doivent être mémorisés : chaque valeur de votre dictionnaire doit donc être une liste d'emplacements.
+
+
+ - Écrivez une fonction qui échange les clés et les valeurs d'un dictionnaire (ce qui permettra par exemple de transformer un dictionnaire anglais/français en un dictionnaire français/anglais).
+On suppose que le dictionnaire ne contient pas plusieurs valeurs identiques.
+
+ - Écrivez un script qui crée un mini-système de base de données fonctionnant à l'aide d'un dictionnaire, dans lequel vous mémoriserez les noms d'une série de copains, leur âge et leur taille.
+Votre script devra comporter deux fonctions :
+ * la première pour le remplissage du dictionnaire, 
+ * et la seconde pour sa consultation. 
+Dans la fonction de remplissage, utilisez une boucle pour accepter les données entrées par l'utilisateur.
+Dans le dictionnaire, le nom de l'élève servira de clé d'accès, et les valeurs seront constituées de tuples (âge, taille), dans lesquels l'âge sera exprimé en années (donnée de type entier), et la taille en mètres (donnée de type réel).
+La fonction de consultation comportera elle aussi une boucle, dans laquelle l'utilisateur pourra fournir un nom quelconque pour obtenir en retour le couple « âge, taille » correspondant. Le résultat de la requête devra être une ligne de texte bien formatée, telle par exemple : 
+« Nom : Jean Dhoute - âge : 15 ans - taille : 1.74 m ».
+Pour obtenir ce résultat, servez-vous du formatage des chaînes de caractères.
+
+Complétez l'exercice précédent en lui ajoutant deux fonctions : l'une pour enregistrer le dictionnaire résultant dans un fichier texte, et l'autre pour reconstituer ce dictionnaire à partir du fichier correspondant.
+Chaque ligne de votre fichier texte correspondra à un élément du dictionnaire. Elle sera formatée de manière à bien séparer :
+- la clé et la valeur (c'est-à-dire le nom de la personne, d'une part, et l'ensemble : « âge + taille », d'autre part ;
+- dans l'ensemble « âge + taille », ces deux données numériques.
+Vous utiliserez donc deux caractères séparateurs différents, par exemple « @ » pour séparer la clé et la valeur, et « # » pour séparer les données constituant cette valeur :
+Juliette@18#1.67
+Jean-Pierre@17#1.78
+Delphine@19#1.71
+Anne-Marie@17#1.63
+etc.
+
+Améliorez encore le script de l'exercice précédent, en utilisant un dictionnaire pour diriger le flux d'exécution du programme au niveau du menu principal.
+Votre programme affichera par exemple :
+(R)écupérer un dictionnaire préexistant sauvegardé dans un fichier
+(A)jouter des données au dictionnaire courant
+(C)onsulter le dictionnaire courant
+(S)auvegarder le dictionnaire courant dans un fichier
+(T)erminer
+Choisissez :
+Suivant le choix opéré par l'utilisateur, vous effectuerez alors l'appel de la fonction correspondante en la sélectionnant dans un dictionnaire de fonctions.
